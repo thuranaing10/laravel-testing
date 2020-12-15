@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'thurarocm77@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'ThuraNaing'),
     ],
 
     /*
@@ -119,5 +119,15 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+    // 'mailgun' => [
+    //     'transport' => 'smtp',
+    //     'host' => env('MAILGUN_HOST','smtp.mailgun.org'),
+    //     'port' => env('MAIL_PORT',587),
+    //     'encryption' => env('MAIL_ENCRYPTION','tls');
+    //     'username' => env('MAILGUN_USERNAME'),
+    //     'password' => env('MAILGUN_PASSWORD'),
+
+    // ],
+    
 
 ];

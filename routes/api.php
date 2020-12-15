@@ -16,3 +16,29 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('register', 'API\RegisterController@register');
+Route::post('login', 'API\RegisterController@login');
+   
+Route::middleware('auth:api')->group( function () {
+    Route::resource('products', 'API\ProductController');
+});
+
+// Route::group([
+//     'prefix' => 'auth'
+// ], function () {
+//     Route::post('login', 'AuthController@login');
+//     Route::post('signup', 'AuthController@signup');
+  
+//     Route::group([
+//       'middleware' => 'auth:api'
+//     ], function() {
+//         Route::get('logout', 'AuthController@logout');
+//         Route::get('user', 'AuthController@user');
+//     });
+// });
+
+//login with passport api
+Route::post('register','Api\AuthController@register');
+Route::post('login','Api\AuthController@login');

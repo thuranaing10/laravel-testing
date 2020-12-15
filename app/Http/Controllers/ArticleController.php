@@ -13,8 +13,7 @@ use Redirect;
 class ArticleController extends Controller
 {
     public function index() {
-    	$articles = Article::all();
-        //$image = Article::get();    
+    	$articles = Article::all();   
     	return view('article.index',compact('articles'));
     }
     

@@ -6,11 +6,30 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "appzcoder/laravel-admin": "^3.3",
+        "botman/botman": "^2.6",
+        "botman/driver-facebook": "^1.10",
+        "botman/driver-web": "^1.5",
+        "ckeditor/ckeditor": "^4.14",
+        "consoletvs/charts": "^6.5",
         "fideloper/proxy": "~3.3",
+        "guzzlehttp/guzzle": "~6.0",
         "intervention/image": "^2.5",
+        "jenssegers/agent": "^2.6",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/passport": "4.0.3",
+        "laravel/tinker": "~1.0",
+        "laravel/ui": "1.2",
+        "laravelcollective/html": "~5.0",
+        "maatwebsite/excel": "~2.1.0",
+        "mailgun/mailgun-php": "dev-master",
+        "overtrue/laravel-follow": "dev-master",
+        "overtrue/laravel-like": "^2.0",
+        "realrashid/sweet-alert": "^3.1",
+        "uxweb/sweet-alert": "~1.4",
+        "yajra/laravel-datatables-oracle": "8.0"
     },
+    
     "require-dev": {
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",

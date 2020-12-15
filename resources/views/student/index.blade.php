@@ -28,7 +28,7 @@
           <td>{{$student->name}}</td>
           <td>
             @if ($student->image)
-                <img src="{{ asset('storage/images/' . $student->image) }}" alt="{{ $student->title }} photo" class="img-fluid" width="100" height="100">
+                <img src="{{ asset('app/public/images/' . $student->image) }}" alt="{{ $student->title }} photo" class="img-fluid" width="100" height="100">
             @endif
           </td>
           <td>

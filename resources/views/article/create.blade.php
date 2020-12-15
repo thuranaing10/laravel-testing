@@ -7,6 +7,26 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+$(function() {
+// Multiple images preview in browser
+  var imagesPreview = function(input, placeToInsertImagePreview) {
+    if (input.files) {
+      var filesAmount = input.files.length;
+      for (i = 0; i < filesAmount; i++) {
+        var reader = new FileReader();
+        reader.onload = function(event) {
+          $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview).width('100px').height('100px');
+        }
+        reader.readAsDataURL(input.files[i]);
+      }
+    }
+  };
+  $('#gallery-photo-add').on('change', function() {
+    imagesPreview(this, 'div.gallery');
+  });
+});
+</script>
 
 <form method="post" action="{{ url('article') }}" enctype="multipart/form-data">
   {{ csrf_field() }}
@@ -20,7 +40,8 @@
   </div>
   <div class="form-group">
       <label for="image">Image</label>
-      <input type="file" class="form-control-file" name="image[]" multiple="">
+      <input type="file" id="gallery-photo-add" class="form-control-file" name="image[]" multiple="">
+      <div class="gallery"></div>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
